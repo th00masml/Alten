@@ -1,0 +1,14 @@
+{
+  "name": "AXA XL Customer Info",
+  "patterns": {
+    "customer_name": ["(?:Full\\s+Name|Customer\\s+Name|Insured)[:\\s]+([A-Z][A-Za-z ,.'-]{2,})"],
+    "address": ["(?:Address)[:\\s]+(.{5,160})"],
+    "policy_number": ["(?:Policy(?:\\s+No\\.?|\\s+Number)?)[:\\s]+([A-Z0-9\\-]{5,})"],
+    "phone": ["(?:Phone|Telephone)[:\\s]+([+0-9 ()-]{6,20})"],
+    "email": ["(?:Email)[:\\s]+([\n\r\t A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,})"],
+    "agent": ["(?:Agent|Broker|Branch)[:\\s]+([A-Za-z0-9 .,'&\\-]{3,80})"],
+    "form_type": ["(AXA\\s*XL.*?(?:Customer|Information|Details))"],
+    "submission_date": ["(?:Date|Submission\\s+Date|Date\\s+Submitted)[:\\s]+(\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,2})"]
+  }
+}
+

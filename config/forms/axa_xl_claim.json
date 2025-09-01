@@ -1,0 +1,15 @@
+{
+  "name": "AXA XL Claim",
+  "patterns": {
+    "customer_name": ["(?:Insured|Customer\\s+Name)[:\\s]+([A-Z][A-Za-z ,.'-]{2,})"],
+    "address": ["(?:Address)[:\\s]+(.{5,120})"],
+    "policy_number": ["(?:Policy(?:\\s+No\\.?|\\s+Number)?)[:\\s]+([A-Z0-9\\-]{5,})"],
+    "claim_type": ["(?:Claim\\s+Type)[:\\s]+([A-Za-z /]{3,50})"],
+    "date_of_incident": ["(?:Date\\s+of\\s+Incident|Loss\\s+Date)[:\\s]+(\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,2})"],
+    "claim_amount": ["(?:Claim\\s+Amount|Amount\\s+Claimed)[:\\s]+([$€£]?\\s?[\\d,]+(?:\\.\\d{2})?)"],
+    "agent": ["(?:Agent|Broker|Branch)[:\\s]+([A-Za-z0-9 .,'&\\-]{3,80})"],
+    "form_type": ["(AXA\\s*XL.*?(?:Claim|Form))"],
+    "submission_date": ["(?:Submission\\s+Date|Date\\s+Submitted)[:\\s]+(\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,2})"]
+  }
+}
+

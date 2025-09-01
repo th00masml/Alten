@@ -1,0 +1,14 @@
+{
+  "name": "AXA XL Policy",
+  "patterns": {
+    "customer_name": ["(?:Insured|Policy Holder|Customer\\s+Name)[:\\s]+([A-Z][A-Za-z ,.'-]{2,})"],
+    "address": ["(?:Address)[:\\s]+(.{5,120})"],
+    "policy_number": ["(?:Policy(?:\\s+No\\.?|\\s+Number)?)[:\\s]+([A-Z0-9\\-]{5,})"],
+    "effective_date": ["(?:Effective\\s+Date|Inception\\s+Date)[:\\s]+(\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,2})"],
+    "expiry_date": ["(?:Expiry\\s+Date|Expiration\\s+Date)[:\\s]+(\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,2})"],
+    "agent": ["(?:Agent|Broker|Branch)[:\\s]+([A-Za-z0-9 .,'&\\-]{3,80})"],
+    "form_type": ["(AXA\\s*XL.*?(?:Policy|Schedule|Certificate))"],
+    "submission_date": ["(?:Issue\\s+Date|Submission\\s+Date|Date\\s+Submitted)[:\\s]+(\\d{2,4}[-/]\\d{1,2}[-/]\\d{1,2})"]
+  }
+}
+

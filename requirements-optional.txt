@@ -1,0 +1,7 @@
+# Optional OCR and improved parsing (pinned)
+pytesseract==0.3.13
+Pillow==11.3.0
+# Choose ONE of the following renderers (examples pinned):
+# pymupdf==1.24.10
+# or pdf2image==1.17.0  # requires Poppler binaries installed
+pdfplumber==0.11.5  # optional: improved text extraction/layout for text PDFs
